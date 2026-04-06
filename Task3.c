@@ -30,11 +30,15 @@ int aboveAverage(int score_array[], int n) {
 }
 
 int main() {
-    int score_array[] = {1, 2, 31, 4, 5, 6, 7, 8, 9, 11};
+    int score = 0;
+    int score_array[10];
+    for (int i = 0; i < 10; i++) {
+        printf("Enter match %d score", i+1);
+        scanf(" %d", &score);
+        score_array[i] = score;
+
+    }
     printf("    HIGHEST SCORE: %10d\n", highestScore(score_array, 10));
     printf("    ABOVE AVG SCORE COUNT: %d\n", aboveAverage(score_array, 10));
     printf("    TOTAL RUNS: %13d", totalRuns(score_array, 10));
 }
-
-
-
